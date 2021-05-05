@@ -6,6 +6,13 @@ function toggleMenu() {
     navigation.classList.toggle('active');
 }
 
+//!--------------------------------------------------------
+const effect = document.querySelector('.effect-2');
+for (var i = 0; i < 28; i++) {
+    effect.innerHTML += '<div class ="circle"></div>';
+}
+
+
 
 //!--------------------------------------------------------
 
