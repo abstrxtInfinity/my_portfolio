@@ -6,13 +6,35 @@ function toggleMenu() {
     navigation.classList.toggle('active');
 }
 
-//!--------------------------------------------------------
+//!-----------------Extras--------------------------
 const effect = document.querySelector('.effect-2');
 for (var i = 0; i < 28; i++) {
     effect.innerHTML += '<div class ="circle"></div>';
 }
+//!-----------------About Tabs--------------------------
 
+(() => {
+    const aboutSection = document.querySelector(".about-section"),
+        tabsContainer = document.querySelector(".about-tabs");
+    tabsContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("tab-item") &&
+            !event.target.classList.contains("active")) {
 
+            const target = event.target.getAttribute("data-target");
+
+            // deactivate active tab-item
+            tabsContainer.querySelector(".active").classList.remove("active");
+            // activate the selected tab-item
+            event.target.classList.add("active");
+
+            // deactivating the tab-content
+            aboutSection.querySelector(".tab-content.active").classList.remove("active");
+            // display the selected tab-content
+            aboutSection.querySelector(target).classList.add("active");
+
+        }
+    })
+})();
 
 //!--------------------------------------------------------
 

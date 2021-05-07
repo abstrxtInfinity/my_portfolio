@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio || Anant Verma</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -18,17 +25,17 @@
         </div>
         <ul class="navigation">
           <li><a href="#home" style="--i: 1">Home</a></li>
-          <li><a href="#abt" style="--i: 2">About</a></li>
+          <li><a href="#about" style="--i: 2">About</a></li>
           <li><a href="#" style="--i: 3">-</a></li>
-          <li><a href="#proj" style="--i: 4">Projects</a></li>
-          <li><a href="#ctc" style="--i: 5">Contact</a></li>
+          <li><a href="#projects" style="--i: 4">Projects</a></li>
+          <li><a href="#contact" style="--i: 5">Contact</a></li>
         </ul>
         <a href="index.html" class="logo"> anant</a>
       </header>
 
       <!-- header ends -->
       <!-- home section starts -->
-      <div class="home-section section">
+      <div class="home-section section" id="home">
         <div class="effect-wrap">
           <div class="effect effect-1"></div>
           <div class="effect-2 effect"></div>
@@ -43,7 +50,7 @@
               <h1>I'm Anant Verma</h1>
               <h3>Sophomore || CSE || NITH</h3>
               <br />
-              <a href="#abt" class="btn">More About Me</a>
+              <a href="#about" class="btn">More About Me</a>
             </div>
             <div class="home-img">
               <div class="img-box">
@@ -100,12 +107,12 @@
       <!-- home section ends -->
       <!-- about section starts -->
 
-      <section class="about-section section">
+      <section class="about-section section" id="about">
         <div class="container">
           <div class="section-title">
             <h2>About Me</h2>
           </div>
-          <div class="row">
+          <div class="about-row">
             <div class="about-img">
               <div class="img-box">
                 <img src="./assets/images/about.png" alt="#" />
@@ -127,63 +134,6 @@
                 <span>Hobbies</span>: Playing video games, listening to music,
                 watching movies and anime, and reading Manga
               </p>
-              <ul>
-                <li id="skills">
-                  Skills:
-                  <p>
-                    <img
-                      src="https://img.shields.io/badge/C%2B%2B-black?style=flat-square&amp;logo=c%2B%2B&logoColor=white"
-                      alt="C++"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/C-black?style=flat-square&amp;logo=c"
-                      alt="C"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-HTML5-black?style=flat-square&amp;logo=html5&amp;logoColor=orange"
-                      alt="HTML5"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-CSS3-black?style=flat-square&amp;logo=css3&logoColor=blue"
-                      alt="CSS3"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-Bootstrap-black?style=flat-square&amp;logo=bootstrap"
-                      alt="Bootstrap"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/Sass-black?style=flat-square&amp;&logo=sass&logoColor=pink"
-                      alt="Sass"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-JavaScript-black?style=flat-square&amp;logo=javascript"
-                      alt="JavaScript"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-Flutter-black?style=flat-square&amp;logo=Flutter&amp;logoColor=blue"
-                      alt="Flutter"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/Dart-black?style=flat-square&amp;&logo=dart&logoColor=blue"
-                      alt="Dart"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/firebase-black?style=flat-square&amp;&logo=firebase&logoColor=yellow"
-                      alt="Firebase"
-                    />
-
-                    <img
-                      src="https://img.shields.io/badge/-Git-black?style=flat-square&amp;logo=git"
-                      alt="Git"
-                    />
-                    <img
-                      src="https://img.shields.io/badge/-GitHub-black?style=flat-square&amp;logo=github"
-                      alt="GitHub"
-                    />
-                  </p>
-                </li>
-              </ul>
-
               <div class="btn-group">
                 <a
                   class="btn"
@@ -195,6 +145,192 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="about-tabs">
+              <span class="tab-item active" data-target=".skills">Skills</span>
+              <span class="tab-item" data-target=".experience">Experience</span>
+              <span class="tab-item" data-target=".education">Education</span>
+            </div>
+          </div>
+          <!-- todo Skills Tab start-->
+          <div class="row">
+            <div class="skills tab-content active">
+              <p>
+                <img
+                  src="https://img.shields.io/badge/C%2B%2B-black?style=for-the-badge&amp;logo=c%2B%2B&logoColor=white"
+                  alt="C++"
+                />
+                <img
+                  src="https://img.shields.io/badge/C-black?style=for-the-badge&amp;logo=c"
+                  alt="C"
+                />
+                <img
+                  src="https://img.shields.io/badge/-HTML5-black?style=for-the-badge&amp;logo=html5&amp;logoColor=orange"
+                  alt="HTML5"
+                />
+                <img
+                  src="https://img.shields.io/badge/-CSS3-black?style=for-the-badge&amp;logo=css3&logoColor=blue"
+                  alt="CSS3"
+                />
+                <img
+                  src="https://img.shields.io/badge/-Bootstrap-black?style=for-the-badge&amp;logo=bootstrap"
+                  alt="Bootstrap"
+                />
+                <img
+                  src="https://img.shields.io/badge/Sass-black?style=for-the-badge&amp;&logo=sass&logoColor=pink"
+                  alt="Sass"
+                />
+                <img
+                  src="https://img.shields.io/badge/-JavaScript-black?style=for-the-badge&amp;logo=javascript"
+                  alt="JavaScript"
+                />
+                <img
+                  src="https://img.shields.io/badge/-Flutter-black?style=for-the-badge&amp;logo=Flutter&amp;logoColor=blue"
+                  alt="Flutter"
+                />
+                <img
+                  src="https://img.shields.io/badge/Dart-black?style=for-the-badge&amp;&logo=dart&logoColor=blue"
+                  alt="Dart"
+                />
+                <img
+                  src="https://img.shields.io/badge/firebase-black?style=for-the-badge&amp;&logo=firebase&logoColor=yellow"
+                  alt="Firebase"
+                />
+
+                <img
+                  src="https://img.shields.io/badge/-Git-black?style=for-the-badge&amp;logo=git"
+                  alt="Git"
+                />
+                <img
+                  src="https://img.shields.io/badge/-GitHub-black?style=for-the-badge&amp;logo=github"
+                  alt="GitHub"
+                />
+              </p>
+            </div>
+          </div>
+          <!-- todo Skills end-->
+          <!-- todo Experience Tab starts-->
+          <div class="row">
+            <div class="experience tab-content">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-briefcase"></i>
+                        <span>May 2021- present</span>
+                        <h3>Frontend Developer</h3>
+                        <h4>Company Name</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-briefcase"></i>
+                        <span>May 2021- present</span>
+                        <h3>Frontend Developer</h3>
+                        <h4>Company Name</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-briefcase"></i>
+                        <span>May 2021- present</span>
+                        <h3>Frontend Developer</h3>
+                        <h4>Company Name</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- todo Experience Tab ends-->
+
+          <!-- todo Education Tab starts-->
+          <div class="row">
+            <div class="education tab-content">
+              <div class="row">
+                <div class="timeline">
+                  <div class="row">
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>July 2019- present</span>
+                        <h3>B.Tech + M.Tech, CSE</h3>
+                        <h4>National Institute of Technology, Hamirpur</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>2018-2019</span>
+                        <h3>Class 12<sup>th</sup></h3>
+                        <h4>Sri Aurobindo Public School, Baddi</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                    <!-- timeline item start-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-inner">
+                        <i class="fa fa-graduation-cap"></i>
+                        <span>2016-2017</span>
+                        <h3>Class 10<sup>th</sup></h3>
+                        <h4>Sri Aurobindo Public School, Baddi</h4>
+
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing
+                          elit. Cumque optio nulla perferendis accusamus magnam
+                          at sed, suscipit veritatis nam ullam earum dolorem
+                          sint tempore, sequi fuga in ipsa, doloremque ea.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- timeline item  ends -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- todo Education Tab ends-->
         </div>
       </section>
 
