@@ -368,9 +368,33 @@ header {
           opacity: 0;
           animation: slideRight 0.5s ease-in-out forwards;
           animation-delay: calc(0.1s * var(--i));
+
           &:hover {
-            transition: 0.5s;
-            box-shadow: var(--box-shadow);
+            transition: 0.4s;
+          }
+        }
+        &:nth-child(1) {
+          a:hover {
+            color: #38529a;
+            box-shadow: var(--box-shadow), 5px 5px 5px #38529a;
+          }
+        }
+        &:nth-child(2) {
+          a:hover {
+            color: #bb2f84;
+            box-shadow: var(--box-shadow), 5px 5px 5px #bb2f84;
+          }
+        }
+        &:nth-child(3) {
+          a:hover {
+            color: #0073b1;
+            box-shadow: var(--box-shadow), 5px 5px 5px #0073b1;
+          }
+        }
+        &:nth-child(4) {
+          a:hover {
+            color: #000;
+            box-shadow: var(--box-shadow), 5px 5px 5px #000;
           }
         }
         &:last-child {
@@ -378,6 +402,7 @@ header {
         }
       }
     }
+
     .copyright {
       color: var(--content-txt);
       font-size: 0.8em;

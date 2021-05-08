@@ -466,10 +466,32 @@ header .navigation.active li a {
 }
 
 .home-section .footer .sci li a:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.home-section .footer .sci li:nth-child(1) a:hover {
+  color: #38529a;
+  -webkit-box-shadow: var(--box-shadow), 5px 5px 5px #38529a;
+          box-shadow: var(--box-shadow), 5px 5px 5px #38529a;
+}
+
+.home-section .footer .sci li:nth-child(2) a:hover {
+  color: #bb2f84;
+  -webkit-box-shadow: var(--box-shadow), 5px 5px 5px #bb2f84;
+          box-shadow: var(--box-shadow), 5px 5px 5px #bb2f84;
+}
+
+.home-section .footer .sci li:nth-child(3) a:hover {
+  color: #0073b1;
+  -webkit-box-shadow: var(--box-shadow), 5px 5px 5px #0073b1;
+          box-shadow: var(--box-shadow), 5px 5px 5px #0073b1;
+}
+
+.home-section .footer .sci li:nth-child(4) a:hover {
+  color: #000;
+  -webkit-box-shadow: var(--box-shadow), 5px 5px 5px #000;
+          box-shadow: var(--box-shadow), 5px 5px 5px #000;
 }
 
 .home-section .footer .sci li:last-child {
