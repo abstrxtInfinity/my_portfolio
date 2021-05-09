@@ -36,6 +36,15 @@ for (var i = 0; i < 28; i++) {
     })
 })();
 
+//!-------------- Project Filter and Popups  ---------------
+(() => {
+
+    const filterContainer = document.querySelector(".projects-filter"),
+
+})();
+
+
+
 //!--------------------------------------------------------
 
 //* Theme toggle
