@@ -138,7 +138,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 99;
+  z-index: 10;
   .logo {
     position: relative;
     font-size: 28px;
@@ -670,6 +670,200 @@ header {
   .tab-content.active {
     display: block;
     animation: fadeInTop 0.5s ease;
+  }
+}
+
+// ** Projects Section
+
+.projects-section {
+  padding: 80px 200px;
+  min-height: 100vh;
+  .section-title {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+    h2 {
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--content-txt);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      &::before {
+        content: attr(data-heading);
+        display: block;
+        color: var(--link-txt);
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .projects-filter {
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    .filter-item {
+      display: inline-block;
+      margin: 0 5px 10px;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+      color: var(--content-txt-muted);
+      font-weight: 500;
+      text-transform: capitalize;
+
+      &:hover:not(.active) {
+        opacity: 0.6;
+      }
+    }
+
+    .active {
+      color: var(--link-txt);
+      box-shadow: var(--outer-shadow-btn);
+    }
+  }
+
+  .project-items {
+    display: flex;
+  }
+
+  .project-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project-item-details {
+    display: none;
+  }
+
+  .project-item-inner {
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: var(--outer-shadow-btn);
+    width: 100%;
+
+    .project-item-img {
+      position: relative;
+      img {
+        border-radius: 5px;
+        width: 100%;
+        transition: all 0.3s ease;
+        margin-bottom: 10px;
+        max-height: 300px;
+        background-color: rgb(212, 212, 212);
+      }
+      .view-project {
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--title-txt);
+        transition: all 0.3s ease;
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        transform: translateY(-10px);
+        z-index: -1;
+        opacity: 0;
+      }
+    }
+    &:hover {
+      .view-project {
+        transform: translateY(-5px);
+        opacity: 1;
+      }
+      img {
+        transform: translateY(-30px);
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0 0;
+
+      text-transform: capitalize;
+    }
+  }
+}
+//! Project Popup
+.project-popup {
+  background-color: var(--bg);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  .pp-img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: var(--outer-shadow);
+  }
+  .pp-main {
+    min-height: 100vh;
+    max-width: 1350px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pp-main-inner {
+    padding: 70px 0 50px;
+    position: relative;
+  }
+  .pp-project-details-btn,
+  .pp-close {
+    position: absolute;
+    top: 15px;
+
+    cursor: pointer;
+    box-shadow: var(--outer-shadow);
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: var(--outer-shadow-hover);
+    }
+    &:active {
+      box-shadow: var(--inner-shadow-btn);
+    }
+  }
+  .pp-project-details-btn {
+    left: 0;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: var(--link-txt);
+    i {
+      margin-left: 5px;
+    }
+  }
+  .pp-close {
+    height: 40px;
+    width: 40px;
+    right: 0;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    &:hover {
+      color: red;
+    }
   }
 }
 
