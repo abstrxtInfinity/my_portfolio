@@ -23,6 +23,7 @@
 html {
   // --bg: #ecf0f3;
   --bg: #f1f2fa;
+  --bg-opacity: rgba(241, 242, 250, 0.6);
   --title-txt: #eb8602;
   --content-txt: #000;
   --content-txt-muted: #454546;
@@ -38,6 +39,10 @@ html {
 body {
   background: var(--bg);
   overflow-x: hidden;
+}
+
+body.stop-scrolling {
+  overflow-y: hidden;
 }
 
 // ! Effects--
@@ -263,6 +268,7 @@ header {
     right: -40%;
     opacity: 0;
     animation: fade-in 1s 2s forwards;
+    overflow: hidden;
 
     // top: 10px;
   }
@@ -740,7 +746,13 @@ header {
     display: flex;
     flex-wrap: wrap;
   }
-
+  .project-item.hide {
+    display: none;
+  }
+  .project-item.show {
+    display: block;
+    animation: fadeInTop 0.5s ease;
+  }
   .project-item-details {
     display: none;
   }
@@ -805,9 +817,35 @@ header {
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
-  &::-webkit-scrollbar {
-    width: 0px;
+  transition: all 0.5s ease;
+
+  .pp-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background: var(--bg-opacity);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    div {
+      height: 40px;
+      width: 40px;
+      border: 3px solid var(--title-txt);
+      border-radius: 50%;
+      border-right: 3px solid transparent;
+      animation: spin 2s backwards infinite;
+    }
+    .active {
+      visibility: visible;
+      opacity: 1;
+    }
   }
+
   .pp-img {
     max-width: 100%;
     width: auto;
@@ -874,6 +912,10 @@ header {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .pp-details.active {
+    opacity: 1;
   }
   .pp-details-inner {
     padding: 30px 0;
@@ -930,6 +972,13 @@ header {
       flex: 0 0 35%;
       max-width: 35%;
       padding: 0 15px;
+      margin-bottom: 10px;
+
+      a {
+        text-decoration: none;
+        font-size: 16px;
+        color: var(--title-txt);
+      }
       ul {
         li {
           display: block;
@@ -954,6 +1003,11 @@ header {
     background-color: hsl(0, 0%, 79%);
     margin-bottom: 20px;
   }
+}
+
+.project-popup.open {
+  visibility: visible;
+  opacity: 1;
 }
 
 // ** Animations

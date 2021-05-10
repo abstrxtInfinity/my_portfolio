@@ -21,6 +21,7 @@
 }*/
 html {
   --bg: #f1f2fa;
+  --bg-opacity: rgba(241, 242, 250, 0.6);
   --title-txt: #eb8602;
   --content-txt: #000;
   --content-txt-muted: #454546;
@@ -37,6 +38,10 @@ html {
 body {
   background: var(--bg);
   overflow-x: hidden;
+}
+
+body.stop-scrolling {
+  overflow-y: hidden;
 }
 
 .effect-wrap {
@@ -314,6 +319,7 @@ header .navigation.active li a {
   opacity: 0;
   -webkit-animation: fade-in 1s 2s forwards;
           animation: fade-in 1s 2s forwards;
+  overflow: hidden;
 }
 
 .home-section .full-screen {
@@ -912,6 +918,16 @@ header .navigation.active li a {
       flex-wrap: wrap;
 }
 
+.projects-section .project-item.hide {
+  display: none;
+}
+
+.projects-section .project-item.show {
+  display: block;
+  -webkit-animation: fadeInTop 0.5s ease;
+          animation: fadeInTop 0.5s ease;
+}
+
 .projects-section .project-item-details {
   display: none;
 }
@@ -982,10 +998,44 @@ header .navigation.active li a {
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-.project-popup::-webkit-scrollbar {
-  width: 0px;
+.project-popup .pp-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: var(--bg-opacity);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.project-popup .pp-loader div {
+  height: 40px;
+  width: 40px;
+  border: 3px solid var(--title-txt);
+  border-radius: 50%;
+  border-right: 3px solid transparent;
+  -webkit-animation: spin 2s backwards infinite;
+          animation: spin 2s backwards infinite;
+}
+
+.project-popup .pp-loader .active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .project-popup .pp-img {
@@ -1076,6 +1126,12 @@ header .navigation.active li a {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.project-popup .pp-details.active {
+  opacity: 1;
 }
 
 .project-popup .pp-details-inner {
@@ -1144,6 +1200,13 @@ header .navigation.active li a {
           flex: 0 0 35%;
   max-width: 35%;
   padding: 0 15px;
+  margin-bottom: 10px;
+}
+
+.project-popup .pp-project-details .info a {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--title-txt);
 }
 
 .project-popup .pp-project-details .info ul li {
@@ -1168,6 +1231,11 @@ header .navigation.active li a {
   display: block;
   background-color: #c9c9c9;
   margin-bottom: 20px;
+}
+
+.project-popup.open {
+  visibility: visible;
+  opacity: 1;
 }
 
 @-webkit-keyframes slideLeft {
