@@ -687,6 +687,58 @@ header .navigation.active li a {
 
 .about-section .experience {
   padding-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-section .experience .dialog {
+  max-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--bg);
+  -webkit-box-shadow: var(--outer-shadow);
+          box-shadow: var(--outer-shadow);
+  padding: 30px 50px;
+}
+
+.about-section .experience .dialog .btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--link-txt);
+  letter-spacing: 0.2em;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: var(--outer-shadow-hover);
+          box-shadow: var(--outer-shadow-hover);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 30px 20px 0 0;
+}
+
+.about-section .experience .dialog .btn:hover {
+  -webkit-box-shadow: var(--inner-shadow-btn);
+          box-shadow: var(--inner-shadow-btn);
 }
 
 .about-section .timeline {
@@ -829,7 +881,9 @@ header .navigation.active li a {
 }
 
 .about-section .tab-content.active {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-animation: fadeInTop 0.5s ease;
           animation: fadeInTop 0.5s ease;
 }
@@ -900,16 +954,13 @@ header .navigation.active li a {
 }
 
 .projects-section .project-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 .projects-section .project-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.33%;
-          flex: 0 0 33.33%;
-  max-width: 33.33%;
   padding: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
