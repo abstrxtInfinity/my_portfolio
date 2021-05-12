@@ -112,12 +112,8 @@ function bodyScrollingToggle() {
     function popupSlideshow() {
         const imgSrc = screenshots[slideIndex];
         const popupImg = popup.querySelector(".pp-img");
-        popup.querySelector(".pp-loader").classList.add("active");
         popupImg.src = imgSrc;
-        popupImg.onLoad = () => {
-            popup.querySelector(".pp-loader").classList.remove("active");
 
-        }
 
     }
 

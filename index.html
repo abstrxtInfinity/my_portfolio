@@ -26,14 +26,40 @@
         <ul class="navigation">
           <li><a href="#home" style="--i: 1">Home</a></li>
           <li><a href="#about" style="--i: 2">About</a></li>
-          <li><a href="#" style="--i: 3">-</a></li>
-          <li><a href="#projects" style="--i: 4">Projects</a></li>
-          <li><a href="#contact" style="--i: 5">Contact</a></li>
+          <!-- <li><a href="#" style="--i: 3">-</a></li> -->
+          <li><a href="#projects" style="--i: 3">Projects</a></li>
+          <li><a href="#contact" style="--i: 4">Contact</a></li>
         </ul>
         <a href="index.html" class="logo"> anant</a>
       </header>
 
       <!-- header ends -->
+      <svg
+        id="top"
+        preserveAspectRatio="xMidYMax meet"
+        class="svg-separator sep5"
+        viewBox="0 0 1600 200"
+        style="display: block"
+        data-height="200"
+      >
+        <polygon
+          class="polygon-bg"
+          points="1488,134 1304,100 1068,152 909.935,92.044 672,198 364,142 242,32 -4,95 -4,204 1604,204 1604,0 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow1"
+          points="672,198 364,142 242,32 -4,95 -4,82.333 242,32 374,136 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow1"
+          points="894,86 672,198 909.935,92.044 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow2"
+          points="1068,152 1302,86 1486,126 1604,0 1488,134 1304,100 "
+        ></polygon>
+      </svg>
+
       <!-- home section starts -->
       <div class="home-section section" id="home">
         <video autoplay muted loop id="myVideo">
@@ -42,7 +68,7 @@
         <div class="effect-wrap">
           <div class="effect effect-1"></div>
           <div class="effect-2 effect"></div>
-          <div class="effect effect-3"></div>
+          <!-- <div class="effect effect-3"></div> -->
           <div class="effect effect-4"></div>
           <div class="effect effect-5">></div>
         </div>
@@ -62,7 +88,7 @@
             </div>
           </div>
         </div>
-        <div class="footer">
+        <!-- <div class="footer">
           <ul class="sci">
             <li>
               <a
@@ -101,13 +127,10 @@
               >
             </li>
           </ul>
-
-          <p class="copyright">
-            Copyright © 2021 Anant Verma. All rights reserved
-          </p>
-        </div>
+        </div> -->
       </div>
       <!-- home section ends -->
+      <hr />
       <!-- about section starts -->
 
       <section class="about-section section" id="about">
@@ -348,6 +371,7 @@
         </div>
       </section>
       <!-- about section ends -->
+      <hr />
       <!-- projects section starts -->
       <section class="projects-section section" id="projects">
         <div class="container">
@@ -611,12 +635,158 @@
             <img src="" alt="" class="pp-img" />
           </div>
         </div>
-        <div class="pp-loader">
-          <div></div>
-        </div>
       </div>
 
       <!-- * Projects Pop-Up ends -->
+      <hr />
+      <!-- contact section starts -->
+
+      <section class="contact-section section" id="contact">
+        <div class="container">
+          <div class="section-title">
+            <h2>Get in Touch</h2>
+
+            <p>
+              If you would like to hire me or would like to provide some
+              valuable feedback, please feel free to contact me.
+            </p>
+          </div>
+          <div class="contact-form">
+            <form
+              action="https://formspree.io/f/xrgrgzqg"
+              method="POST"
+              enctype="multipart/form-data"
+              id="my-form"
+            >
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="Name" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" name="Email" id="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" name="Subject" id="subject" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  name="message"
+                  id="Message"
+                  cols="30"
+                  rows="10"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn pageclip-form__submit">
+                Deliver Message
+              </button>
+            </form>
+            <div class="img-box">
+              <img src="./assets/images/contact.png" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section starts -->
+
+      <!-- footer -->
+
+      <svg
+        id=""
+        preserveAspectRatio="xMidYMax meet"
+        class="svg-separator sep5"
+        viewBox="0 0 1600 200"
+        style="display: block"
+        data-height="200"
+      >
+        <polygon
+          class="polygon-bg"
+          points="1488,134 1304,100 1068,152 909.935,92.044 672,198 364,142 242,32 -4,95 -4,204 1604,204 1604,0 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow1"
+          points="672,198 364,142 242,32 -4,95 -4,82.333 242,32 374,136 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow1"
+          points="894,86 672,198 909.935,92.044 "
+        ></polygon>
+        <polygon
+          class="polygon-shadow2"
+          points="1068,152 1302,86 1486,126 1604,0 1488,134 1304,100 "
+        ></polygon>
+      </svg>
+      <footer>
+        <div class="row">
+          <div class="left-col">
+            <!-- todo: phn no. and mail card -->
+            <div class="info-card">
+              <h3 data-heading="Phone Number">
+                <i class="fab fa-whatsapp"></i>7807622588
+              </h3>
+            </div>
+            <div class="info-card">
+              <h3 data-heading="Email-address">
+                <i class="fa fa-mail-bulk"></i>anantverma2001@gmail.com
+              </h3>
+            </div>
+          </div>
+          <div class="right-col">
+            <!-- todo: social icons -->
+            <div class="icons-row">
+              <ul class="social-icons">
+                <li>
+                  <a
+                    href="https://www.facebook.com/anant.verma.568294"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-facebook-f"></i><span>Facebook</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/abstractinfinity0519/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-instagram"></i><span>Instagram</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/abstrxtinfinity/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/abstrxtInfinity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fab fa-github"></i><span>Github</span></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/abstrxtInfinity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="fa fa-star"></i><span>Star my Repo</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <p class="copyright">
+              Copyright © 2021 Anant Verma. All rights reserved
+            </p>
+          </div>
+        </div>
+      </footer>
     </section>
     <script src="./assets/js/script.js"></script>
   </body>
