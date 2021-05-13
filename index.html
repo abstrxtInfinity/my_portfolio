@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio || Anant Verma</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -19,7 +24,7 @@
     <section>
       <!-- header starts -->
 
-      <header>
+      <header id="top-section">
         <div class="icon" onclick="toggleMenu()">
           <div class="hamburger"></div>
         </div>
@@ -131,6 +136,9 @@
       </div>
       <!-- home section ends -->
       <hr />
+      <a class="top-link hide" id="js-top" href="#top-section">
+        <img src="./assets/images/arrow.gif" />
+      </a>
       <!-- about section starts -->
 
       <section class="about-section section" id="about">
@@ -386,12 +394,16 @@
                 <span class="filter-item" data-target="web application"
                   >Web Development</span
                 >
+                <span class="filter-item" data-target="web components"
+                  >Web Components</span
+                >
                 <span class="filter-item" data-target="android application"
                   >Android Development</span
                 >
                 <span class="filter-item" data-target="ui design"
                   >UI Designs</span
                 >
+
                 <!-- <span class="filter-item" data-target=""></span> -->
               </div>
             </div>
@@ -541,7 +553,7 @@
                 <div class="project-item-inner">
                   <div class="project-item-img">
                     <img
-                      src="./assets/images/thumbnails/p4Thumb.jpeg"
+                      src="./assets/images/thumbnails/p4Thumb.jpg"
                       alt="404"
                       data-screenshots="https://res.cloudinary.com/abstrxtinfinity/image/upload/v1620645249/Portfolio_Images/p4_pv6yqq.png"
                     />
@@ -570,6 +582,53 @@
                                 href="https://www.figma.com/file/lUWVa7M2zNY9P4szY5QtIi/Cyclo-Ui"
                                 target="_blank"
                                 >[ View Design ]</a
+                              ></span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Project  Details ends-->
+                </div>
+              </div>
+              <!-- !project item ends -->
+
+              <!-- !project item starts -->
+              <div class="project-item" data-category="web components">
+                <div class="project-item-inner">
+                  <div class="project-item-img">
+                    <img
+                      src="./assets/images/thumbnails/p5Thumb.png"
+                      alt="404"
+                      data-screenshots="https://res.cloudinary.com/abstrxtinfinity/image/upload/v1620873669/Portfolio_Images/p5_ztk0lr.jpg"
+                    />
+                    <span class="view-project">View Project</span>
+                  </div>
+                  <p class="project-item-title">Web Components</p>
+                  <!-- Project  Details starts-->
+                  <div class="project-item-details">
+                    <div class="row">
+                      <div class="description">
+                        <h3>Project Brief:</h3>
+                        <p>Web components repository</p>
+                      </div>
+                      <div class="info">
+                        <h3>Project Info</h3>
+                        <ul>
+                          <li>Date - <span>Jan-2021</span></li>
+                          <li>
+                            Technology -
+                            <span> HTML, CSS, Js </span>
+                          </li>
+                          <li>
+                            Link -
+                            <span
+                              ><a
+                                href="https://github.com/abstrxtInfinity/abstrxtInfinity.github.io"
+                                target="_blank"
+                                >[ View repository ]</a
                               ></span
                             >
                           </li>
@@ -691,7 +750,20 @@
         </div>
       </section>
       <!-- contact section starts -->
-
+      <div class="theme-toggle">
+        <i class="fa fa-moon" id="box-toggle-icon"></i>
+        <div class="toggle-box">
+          <div class="toggle-button">
+            <label class="label">
+              <div class="toggle-theme">
+                <input class="toggle-state" type="checkbox" name="theme" />
+                <div class="indicator inverted"></div>
+              </div>
+              <div class="label-text">Change Theme</div>
+            </label>
+          </div>
+        </div>
+      </div>
       <!-- footer -->
 
       <svg
