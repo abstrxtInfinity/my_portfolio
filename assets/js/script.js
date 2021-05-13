@@ -185,9 +185,22 @@ window.addEventListener("scroll", scrollFunc);
 
 
 //!--------------------------------------------------------
+const removeHash = () => {
+    let y = window.scrollY;
+
+    var hash = location.hash.replace('#', '');
+
+    if (y === 0) {
+        if (hash != '') {
 
 
+            // Clear the hash in the URL
+            location.hash = '';
+        }
 
+    }
+}
+window.addEventListener("scroll", removeHash);
 //!--------------------------------------------------------
 
 // * Side theme box toggle

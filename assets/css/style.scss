@@ -36,6 +36,7 @@ html {
   --form-field-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   --form-field-focus-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   --video-filter: none;
+  --logo-filter: invert(1);
 
   scroll-behavior: smooth;
   user-select: none;
@@ -74,6 +75,7 @@ html[data-theme="dark"] {
   --form-field-focus-shadow: inset 1px 1px 2px #ffffff07,
     inset -1px -1px 2px #0000007f;
   --video-filter: invert(1);
+  --logo-filter: none;
 }
 html[data-theme="dark"] .toggle {
   filter: invert(1) hue-rotate(180deg);
@@ -393,15 +395,16 @@ header {
   z-index: 10;
   .logo {
     position: relative;
-
-    font-size: 28px;
-    color: var(--bg);
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
     opacity: 0;
     animation: slideRight 0.5s ease-in-out forwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60%;
+      filter: var(--logo-filter);
+    }
   }
   .icon {
     position: relative;
