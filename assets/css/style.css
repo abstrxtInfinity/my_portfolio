@@ -32,11 +32,58 @@ html {
     inset 3px 3px 5px rgb(24, 23, 23);
   --form-field-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
   --form-field-focus-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  --video-filter: none;
   scroll-behavior: smooth;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+html[data-theme="dark"] {
+  --bg: #0e0d05;
+  --bg-opacity: rgba(0, 0, 0, 0.514);
+  --title-txt: #eb8602;
+  --content-txt: #f1f2fa;
+  --content-txt-muted: #5e5e5e;
+  --title-txt-muted: #7e4121;
+  --link-txt: #e04146;
+  --polygon-bg: #f1f2fa;
+  --polygon-shadow1: #5c5c5c;
+  --polygon-shadow2: #30303080;
+  --box-shadow: inset 5px 5px 5px #ffffff07, inset -5px -5px 15px #0000007f,
+    5px 5px 5px #ffffff07, -5px -5px 15px #0000007f;
+  --box-shadow-indicator: -8px -4px 8px 0px #0000007f,
+    8px 4px 12px 0px #ffffff07;
+  --outer-shadow: -5px -5px 20px rgb(24, 23, 23), 5px 5px 20px #0000007f;
+  --outer-shadow-hover: -2px -2px 5px rgb(24, 23, 23), 2px 2px 5px #0000007f;
+  --outer-shadow-dark: -10px -10px 21px #d0d0d0, 10px 10px 21px #dddcdc;
+  --outer-shadow-hover-dark: -2px -2px 5px #f8f8f8, 2px 2px 5px #d0d0d0;
+  --outer-shadow-btn: 3px 3px 3px rgb(24, 23, 23), -3px -3px 3px #0000007f;
+  --inner-shadow-btn: inset 3px 3px 3px rgb(24, 23, 23),
+    inset -3px -3px 3px #0000007f;
+  --inner-shadow-btn-dark: inset 3px 3px 3px #d0d0d0,
+    inset -3px -3px 3px #f5f4f4;
+  --form-field-shadow: inset 2px 2px 5px #ffffff07,
+    inset -5px -5px 10px #0000007f;
+  --form-field-focus-shadow: inset 1px 1px 2px #ffffff07,
+    inset -1px -1px 2px #0000007f;
+  --video-filter: invert(1);
+}
+
+html[data-theme="dark"] .toggle {
+  -webkit-filter: invert(1) hue-rotate(180deg);
+          filter: invert(1) hue-rotate(180deg);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
 }
 
 body {
@@ -46,6 +93,39 @@ body {
 
 body.stop-scrolling {
   overflow-y: hidden;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f1f2fa;
+  /* change if the mask should have another color then white */
+  z-index: 102;
+  /* makes sure it stays on top */
+}
+
+#status {
+  width: 40%;
+  height: 40%;
+  background-image: url("../images/loader.gif");
+  -webkit-filter: drop-shadow(0 100px 5px rgba(0, 0, 0, 0.1)) hue-rotate(55deg);
+          filter: drop-shadow(0 100px 5px rgba(0, 0, 0, 0.1)) hue-rotate(55deg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .polygon-bg {
@@ -202,6 +282,8 @@ hr ~ * {
   height: 40px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+  -webkit-filter: var(--video-filter);
+          filter: var(--video-filter);
 }
 
 .top-link.show {
@@ -215,7 +297,7 @@ hr ~ * {
 }
 
 .top-link:hover {
-  background-color: #e8e8e8;
+  background-color: var(--content-txt-muted);
 }
 
 .theme-toggle {
@@ -232,8 +314,11 @@ hr ~ * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  -webkit-animation: fade-in 1s 2s forwards;
+          animation: fade-in 1s 2s forwards;
 }
 
 .theme-toggle i {
@@ -378,7 +463,7 @@ header .logo {
 
 header .icon {
   position: relative;
-  background: #0c1013;
+  background: var(--polygon-bg);
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -482,7 +567,7 @@ header .navigation {
 
 header .navigation li {
   list-style: none;
-  background: #0c1013;
+  background: var(--polygon-bg);
   padding: 10px 0px;
 }
 
@@ -521,6 +606,8 @@ header .navigation.active li a {
   -webkit-animation: fade-in 1s 2s forwards;
           animation: fade-in 1s 2s forwards;
   overflow: hidden;
+  -webkit-filter: var(--video-filter);
+          filter: var(--video-filter);
 }
 
 .home-section .full-screen {
@@ -917,6 +1004,7 @@ header .navigation.active li a {
   background-color: var(--bg);
   -webkit-box-shadow: var(--outer-shadow);
           box-shadow: var(--outer-shadow);
+  color: var(--content-txt);
   border-radius: 10px;
   padding: 30px 50px;
 }
@@ -992,6 +1080,7 @@ header .navigation.active li a {
   padding: 30px;
   border-radius: 5px;
   position: relative;
+  color: var(--content-txt);
 }
 
 .about-section .timeline .timeline-item .timeline-item-inner::before {
@@ -1093,6 +1182,7 @@ header .navigation.active li a {
 .projects-section {
   padding: 10px 200px;
   min-height: 100vh;
+  color: var(--content-txt);
 }
 
 .projects-section .section-title {
@@ -1253,6 +1343,7 @@ header .navigation.active li a {
   visibility: hidden;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  color: var(--content-txt);
 }
 
 .project-popup .pp-img {
@@ -1596,6 +1687,7 @@ header .navigation.active li a {
   transition: all 0.3s ease;
   display: inline-block;
   margin: 30px 20px 0 0;
+  background: var(--bg);
 }
 
 .contact-section .contact-form .btn:hover {
@@ -1610,7 +1702,7 @@ header .navigation.active li a {
 
 footer {
   min-height: 20vh;
-  background: #0c1013;
+  background: var(--polygon-bg);
 }
 
 footer .row {
@@ -1671,9 +1763,9 @@ footer .right-col .social-icons li a span {
   font-size: 1rem;
   font-weight: 500;
   white-space: nowrap;
-  color: #000;
+  color: var(--content-txt);
   border-radius: 50px;
-  background-color: #fff;
+  background-color: var(--bg);
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1697,8 +1789,8 @@ footer .right-col .social-icons li a i {
   transition: box-shadow 0s;
   transition: box-shadow 0s, -webkit-box-shadow 0s;
   border-radius: 50%;
-  -webkit-box-shadow: 0 8px 24px #fff;
-          box-shadow: 0 8px 24px #fff;
+  -webkit-box-shadow: 0 8px 24px var(--bg);
+          box-shadow: 0 8px 24px var(--bg);
 }
 
 footer .right-col .social-icons li a::before {
@@ -1726,7 +1818,6 @@ footer .right-col .social-icons li a:hover i {
           box-shadow: none;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
-  color: var(--bg);
   background: transparent;
   -webkit-transition: all 265ms ease-in;
   transition: all 265ms ease-in;

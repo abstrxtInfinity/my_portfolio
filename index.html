@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio || Anant Verma</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
@@ -21,6 +22,10 @@
   </head>
 
   <body>
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+
     <section>
       <!-- header starts -->
 
@@ -860,6 +865,14 @@
         </div>
       </footer>
     </section>
+    <script>
+      $(window).on("load", function () {
+        // makes sure the whole site is loaded
+        $("#status").fadeOut(); // will first fade out the loading animation
+        $("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+        $("body").delay(350).css({ overflowy: "visible" });
+      });
+    </script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
