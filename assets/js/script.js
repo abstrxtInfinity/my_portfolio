@@ -214,9 +214,16 @@ boxToggleIcon.addEventListener("click", () => {
 
 function scrollClose() {
     let y = window.scrollY;
-    if (y > 0 && box.classList.contains("open")) {
+    const menuToggle = document.querySelector('.icon');
+    const navigation = document.querySelector('.navigation');
+
+    if ((y > 0 && box.classList.contains("open")) || (y > 0 && menuToggle.classList.contains("active"))) {
+        menuToggle.classList.remove('active');
+        navigation.classList.remove('active');
         box.classList.remove('open');
+
     }
+
 };
 window.addEventListener("scroll", scrollClose);
 
@@ -225,10 +232,14 @@ var checkbox = document.querySelector('input[name=theme]');
 checkbox.addEventListener('change', function () {
     if (this.checked) {
         trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
+        darkTheme()
+        localStorage.setItem("theme", "dark")
+
     } else {
         trans()
-        document.documentElement.setAttribute('data-theme', 'light')
+        lightTheme()
+        localStorage.setItem("theme", "light")
+
     }
 
 })
@@ -238,6 +249,31 @@ let trans = () => {
         document.documentElement.classList.remove('transition')
     }, 1000)
 }
+
+function darkTheme() {
+    box.querySelector(".toggle-state").checked = "true"
+    document.documentElement.setAttribute('data-theme', 'dark')
+    boxToggleIcon.classList.remove("fa-moon")
+    boxToggleIcon.classList.add("fa-sun")
+}
+function lightTheme() {
+    document.documentElement.setAttribute('data-theme', 'light')
+    boxToggleIcon.classList.remove("fa-sun")
+    boxToggleIcon.classList.add("fa-moon")
+}
+
+// ? reload same theme on revisit/refresh
+
+const themeMode = () => {
+    if (localStorage.getItem("theme") !== null) {
+        if (localStorage.getItem("theme") === "dark") {
+            darkTheme()
+        } else {
+            lightTheme()
+        }
+    }
+}
+themeMode();
 
 //!--------------------------------------------------------
 

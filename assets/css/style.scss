@@ -37,6 +37,7 @@ html {
   --form-field-focus-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   --video-filter: none;
   --logo-filter: invert(1);
+  --hr: rgba(0, 0, 0, 0.2);
 
   scroll-behavior: smooth;
   user-select: none;
@@ -76,6 +77,7 @@ html[data-theme="dark"] {
     inset -1px -1px 2px #0000007f;
   --video-filter: invert(1);
   --logo-filter: none;
+  --hr: rgba(255, 255, 255, 0.2);
 }
 html[data-theme="dark"] .toggle {
   filter: invert(1) hue-rotate(180deg);
@@ -149,7 +151,7 @@ hr {
   margin: 3rem 0 5rem -50vw;
   left: 50%;
   border: none;
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 2px dashed var(--hr);
   float: left;
 }
 hr ~ * {
@@ -287,10 +289,10 @@ hr ~ * {
 // ! Theme Toggle
 
 .theme-toggle {
-  position: fixed;
+  position: absolute;
   top: 25%;
   right: 0px;
-  z-index: 101;
+  z-index: 50;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -576,6 +578,7 @@ header {
       box-shadow: var(--outer-shadow);
       transition: all 0.3s ease;
       display: inline-block;
+      background: var(--bg);
       &:hover {
         box-shadow: var(--outer-shadow-hover);
       }
@@ -1322,6 +1325,7 @@ header {
         width: 80%;
         object-fit: contain;
         animation: float 3s infinite;
+        filter: hue-rotate(300deg);
       }
     }
 

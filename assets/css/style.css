@@ -34,6 +34,7 @@ html {
   --form-field-focus-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   --video-filter: none;
   --logo-filter: invert(1);
+  --hr: rgba(0, 0, 0, 0.2);
   scroll-behavior: smooth;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -71,6 +72,7 @@ html[data-theme="dark"] {
     inset -1px -1px 2px #0000007f;
   --video-filter: invert(1);
   --logo-filter: none;
+  --hr: rgba(255, 255, 255, 0.2);
 }
 
 html[data-theme="dark"] .toggle {
@@ -157,7 +159,7 @@ hr {
   margin: 3rem 0 5rem -50vw;
   left: 50%;
   border: none;
-  border-bottom: 2px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 2px dashed var(--hr);
   float: left;
 }
 
@@ -303,10 +305,10 @@ hr ~ * {
 }
 
 .theme-toggle {
-  position: fixed;
+  position: absolute;
   top: 25%;
   right: 0px;
-  z-index: 101;
+  z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,6 +689,7 @@ header .navigation.active li a {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: inline-block;
+  background: var(--bg);
 }
 
 .home-section .home-text .btn:hover {
@@ -1617,6 +1620,8 @@ header .navigation.active li a {
      object-fit: contain;
   -webkit-animation: float 3s infinite;
           animation: float 3s infinite;
+  -webkit-filter: hue-rotate(300deg);
+          filter: hue-rotate(300deg);
 }
 
 .contact-section .contact-form form {
