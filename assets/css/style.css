@@ -1002,7 +1002,7 @@ header .navigation.active li a {
 }
 
 .about-section .experience .dialog {
-  max-width: 400px;
+  max-width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,6 +1164,10 @@ header .navigation.active li a {
 
 .about-section .education {
   padding-bottom: 80px;
+}
+
+.about-section .education .row {
+  width: 100%;
 }
 
 .about-section .education .timeline .timeline-item-inner::before {

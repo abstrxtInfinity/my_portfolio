@@ -814,7 +814,7 @@ header {
     justify-content: center;
     align-items: center;
     .dialog {
-      max-width: 400px;
+      max-width: 450px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -949,6 +949,9 @@ header {
   }
   .education {
     padding-bottom: 80px;
+    .row {
+      width: 100%;
+    }
     .timeline {
       .timeline-item-inner {
         &::before {
