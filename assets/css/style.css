@@ -1198,7 +1198,7 @@ header .navigation.active li a {
 }
 
 .projects-section {
-  padding: 10px 200px;
+  padding: 10px 100px;
   min-height: 100vh;
   color: var(--content-txt);
 }
