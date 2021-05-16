@@ -490,13 +490,12 @@ header {
     transition: 0.5s;
     li {
       list-style: none;
-      background: var(--polygon-bg);
       padding: 10px 0px;
       a {
         color: var(--bg);
         text-decoration: none;
         font-size: 16px;
-        margin: 0 20px;
+        margin: 0 10px;
         font-weight: 600;
         display: inline-block;
         opacity: 0;
@@ -1039,7 +1038,6 @@ header {
 
   .project-items {
     display: grid;
-    // grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -1067,12 +1065,16 @@ header {
 
     .project-item-img {
       position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       img {
         border-radius: 5px;
-        width: 100%;
+        width: 400px;
+        height: 225px;
         transition: all 0.3s ease;
         margin-bottom: 10px;
-        max-height: 300px;
         background-color: rgb(212, 212, 212);
       }
       .view-project {
@@ -1405,6 +1407,7 @@ header {
 
 // **footer
 footer {
+  width: 100%;
   min-height: 20vh;
   background: var(--polygon-bg);
   .row {
@@ -1518,6 +1521,7 @@ footer {
       justify-content: center;
       align-items: center;
       border-radius: 30px;
+      margin-bottom: 20px;
 
       &:hover {
         box-shadow: var(--inner-shadow-btn-dark);

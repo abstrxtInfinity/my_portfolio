@@ -581,7 +581,6 @@ header .navigation {
 
 header .navigation li {
   list-style: none;
-  background: var(--polygon-bg);
   padding: 10px 0px;
 }
 
@@ -589,7 +588,7 @@ header .navigation li a {
   color: var(--bg);
   text-decoration: none;
   font-size: 16px;
-  margin: 0 20px;
+  margin: 0 10px;
   font-weight: 600;
   display: inline-block;
   opacity: 0;
@@ -1304,15 +1303,24 @@ header .navigation.active li a {
 
 .projects-section .project-item-inner .project-item-img {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .projects-section .project-item-inner .project-item-img img {
   border-radius: 5px;
-  width: 100%;
+  width: 400px;
+  height: 225px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-bottom: 10px;
-  max-height: 300px;
   background-color: #d4d4d4;
 }
 
@@ -1722,6 +1730,7 @@ header .navigation.active li a {
 }
 
 footer {
+  width: 100%;
   min-height: 20vh;
   background: var(--polygon-bg);
 }
@@ -1893,6 +1902,7 @@ footer .left-col a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 30px;
+  margin-bottom: 20px;
 }
 
 footer .left-col a:hover {

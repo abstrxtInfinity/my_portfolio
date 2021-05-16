@@ -133,6 +133,7 @@
         align-items: center;
       }
       .btn {
+        font-size: 12px;
         padding: 15px 15px;
         margin: 30px 20px 0 0;
       }
@@ -140,8 +141,16 @@
     .skills {
       p {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-gap: 30px 50px;
+      }
+    }
+    .experience {
+      .dialog {
+        .btn {
+          font-size: 12px;
+          padding: 10px 10px;
+        }
       }
     }
     .experience,
@@ -182,6 +191,14 @@
     .project-items {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
+    }
+    .project-item-inner {
+      .project-item-img {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 
