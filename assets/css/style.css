@@ -1869,34 +1869,64 @@ footer .left-col {
   display: -ms-flexbox;
   display: flex;
   width: 70%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-footer .left-col .info-card {
+footer .left-col a {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 30%;
-          flex: 0 0 30%;
-  min-width: 30%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  min-width: 40%;
+  text-decoration: none;
   padding: 30px 40px;
+  -webkit-box-shadow: var(--outer-shadow-hover-dark);
+          box-shadow: var(--outer-shadow-hover-dark);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: var(--outer-shadow-hover-dark);
-          box-shadow: var(--outer-shadow-hover-dark);
-  margin-right: 10%;
+  border-radius: 30px;
+}
+
+footer .left-col a:hover {
+  -webkit-box-shadow: var(--inner-shadow-btn-dark);
+          box-shadow: var(--inner-shadow-btn-dark);
+}
+
+footer .left-col a:hover h3 {
+  color: var(--bg);
+}
+
+footer .left-col a:hover h3 i {
+  color: var(--link-txt);
+  -webkit-box-shadow: var(--inner-shadow-btn-dark);
+          box-shadow: var(--inner-shadow-btn-dark);
+}
+
+footer .left-col .info-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
   cursor: pointer;
-  border-radius: 30px;
 }
 
 footer .left-col .info-card h3 {
@@ -1947,21 +1977,6 @@ footer .left-col .info-card h3::before {
   display: flex;
   color: var(--content-txt-muted);
   font-size: 16px;
-}
-
-footer .left-col .info-card:hover {
-  -webkit-box-shadow: var(--outer-shadow-dark);
-          box-shadow: var(--outer-shadow-dark);
-}
-
-footer .left-col .info-card:hover h3 {
-  color: var(--bg);
-}
-
-footer .left-col .info-card:hover h3 i {
-  color: var(--link-txt);
-  -webkit-box-shadow: var(--inner-shadow-btn-dark);
-          box-shadow: var(--inner-shadow-btn-dark);
 }
 
 @-webkit-keyframes slideLeft {
