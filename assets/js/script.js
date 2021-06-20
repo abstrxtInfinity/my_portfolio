@@ -7,6 +7,7 @@ function toggleMenu() {
 }
 
 //!-----------------Extras--------------------------
+
 const effect = document.querySelector('.effect-2');
 for (var i = 0; i < 28; i++) {
     effect.innerHTML += '<div class ="circle"></div>';
@@ -42,6 +43,7 @@ function bodyScrollingToggle() {
 })();
 
 //!-------------- Project Filter and Popups  ---------------
+
 (() => {
 
     const filterContainer = document.querySelector(".projects-filter"),
@@ -185,6 +187,7 @@ window.addEventListener("scroll", scrollFunc);
 
 
 //!--------------------------------------------------------
+
 const removeHash = () => {
     let y = window.scrollY;
 
@@ -201,6 +204,7 @@ const removeHash = () => {
     }
 }
 window.addEventListener("scroll", removeHash);
+
 //!--------------------------------------------------------
 
 // * Side theme box toggle
@@ -226,6 +230,8 @@ function scrollClose() {
 
 };
 window.addEventListener("scroll", scrollClose);
+
+//!--------------------------------------------------------
 
 //* Theme toggle
 var checkbox = document.querySelector('input[name=theme]');
