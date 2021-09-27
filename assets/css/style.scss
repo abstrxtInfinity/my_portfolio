@@ -436,10 +436,10 @@ header {
 
   .hamburger {
     z-index: 2;
-    width: 30px;
-    height: 2px;
     background: var(--bg);
     position: absolute;
+    width: 30px;
+    height: 2px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
