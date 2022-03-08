@@ -38,10 +38,10 @@
     background: var(--content-txt);
   }
   header .navigation {
+    background: var(--content-txt);
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--content-txt);
     width: 40%;
     height: 100vh;
     display: -webkit-box;

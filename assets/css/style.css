@@ -515,10 +515,10 @@ header .icon.active {
 
 header .hamburger {
   z-index: 2;
-  width: 30px;
-  height: 2px;
   background: var(--bg);
   position: absolute;
+  width: 30px;
+  height: 2px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1161,23 +1161,28 @@ header .navigation.active li a {
   left: -70px;
 }
 
-.about-section .education {
+.about-section .education,
+.about-section .experience {
   padding-bottom: 80px;
 }
 
-.about-section .education .row {
+.about-section .education .row,
+.about-section .experience .row {
   width: 100%;
 }
 
-.about-section .education .timeline .timeline-item-inner::before {
+.about-section .education .timeline .timeline-item-inner::before,
+.about-section .experience .timeline .timeline-item-inner::before {
   background: var(--link-txt);
 }
 
-.about-section .education .timeline .timeline-item-inner span {
+.about-section .education .timeline .timeline-item-inner span,
+.about-section .experience .timeline .timeline-item-inner span {
   color: var(--link-txt);
 }
 
-.about-section .education .timeline .timeline-item-inner .fa {
+.about-section .education .timeline .timeline-item-inner .fa,
+.about-section .experience .timeline .timeline-item-inner .fa {
   color: var(--link-txt);
 }
 

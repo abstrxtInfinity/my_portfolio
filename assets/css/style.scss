@@ -863,7 +863,6 @@ header {
       flex: 0 0 100%;
       max-width: 100%;
       padding: 0 15px;
-
       &:nth-child(odd) {
         padding-right: calc(50% + 50px);
         text-align: right;
@@ -946,7 +945,9 @@ header {
       }
     }
   }
-  .education {
+
+  .education,
+  .experience {
     padding-bottom: 80px;
     .row {
       width: 100%;
@@ -966,6 +967,7 @@ header {
       }
     }
   }
+
   .tab-content {
     flex: 0 0 100%;
     max-width: 100%;
